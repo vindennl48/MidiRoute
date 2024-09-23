@@ -1,9 +1,12 @@
 from Files import Settings
 from Helpers import select_split, send_cc, clamp, select_split, ring, mm_convert
 from Axefx import axefx_send
+import mido
 
 fighter_twister = {
     "name":       "Midi Fighter Twister",
+    #  "name":       "WIDI Bud Pro",
+    "alias":      "fighter_twister",
     "virtual":    False,
     "chan_value": 0,
     "chan_press": 1,
@@ -113,29 +116,37 @@ def ft_save_settings():
     ft_settings.json = ft_save_data
     ft_settings.save()
 
+def callback(message, data):
+    msg = mm_convert(message)
+    #  print(f"--> Fighter Twister: {msg}")
+    if msg.type != "control_change": return
+    if "force" not in data: data["force"] = False
+
+    for cb in ft_callbacks:
+        type = None
+        if msg.channel == fighter_twister["chan_value"]:
+            type = "value"
+        elif msg.channel == fighter_twister["chan_press"]:
+            type = "press"
+
+        if type is not None:
+            cb(type, msg.control, msg.value, data["force"])
+
+def ft_setup_callbacks():
+    fighter_twister["port_in"].set_callback(callback, {})
+
 def ft_push_settings():
     for knob in ft_save_data:
         ft_push_value(knob["id"], knob["value"])
         ft_push_color(knob["id"], knob["color"])
         ft_push_brit(knob["id"], knob["brightness"])
 
-def ft_setup_callbacks():
-    def callback(message, data):
-        msg = mm_convert(message)
-        #  print(f"--> Fighter Twister: {msg}")
-        if msg.type != "control_change": return
-
-        for cb in ft_callbacks:
-            type = None
-            if msg.channel == fighter_twister["chan_value"]:
-                type = "value"
-            elif msg.channel == fighter_twister["chan_press"]:
-                type = "press"
-
-            if type is not None:
-                cb(type, msg.control, msg.value)
-
-    fighter_twister["port_in"].set_callback(callback, {})
+        callback((mido.Message(
+            "control_change",
+            channel = fighter_twister["chan_value"],
+            control = knob["id"],
+            value   = knob["value"]
+        ).bytes(), 0), {"force": True})
 
 
 ################################################################################
@@ -150,7 +161,7 @@ def ftc_amp_tone(type, ctrl, value, force=False):
     elif ctrl == 18: cc = "dist_tone_exp"
 
     if cc is not None:
-        if ft_update_value(ctrl, value, force): axefx_send("dist_tone_exp", value)
+        if ft_update_value(ctrl, value, force): axefx_send(cc, value)
 ft_callbacks.append(ftc_amp_tone)
 
 def ftc_reset(type, ctrl, value, force=False):

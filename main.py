@@ -5,8 +5,9 @@ import mido
 from FighterTwister import fighter_twister, ft_load_settings, ft_save_settings
 from FighterTwister import ft_setup_callbacks, ft_push_settings
 from Axefx import axefx
+from Widi import widi, widi_setup_callbacks
 
-devices = [ fighter_twister, axefx ]
+devices = [ fighter_twister, axefx, widi ]
 
 ################################################################################
 ## Functions ###################################################################
@@ -35,7 +36,7 @@ def setup():
         for device in devices:
             if device["virtual"]: continue
 
-            print(f"--> Selecting MIDI Input Port: {device['name']}..")
+            print(f"--> Selecting MIDI Port '{device['name']}' for '{device['alias']}' ..")
 
             if device["name"] in midi_in_ports:
                 device["port_id"] = midi_in_ports.index(device["name"])
@@ -116,6 +117,8 @@ if __name__ == "__main__":
     ft_load_settings()
     ft_setup_callbacks()
     ft_push_settings()
+
+    widi_setup_callbacks()
 
     loop()
     cleanup()

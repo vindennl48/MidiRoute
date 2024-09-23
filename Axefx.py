@@ -1,9 +1,10 @@
 from Helpers import send_cc
 
 axefx = {
-    "name":       "Axe FX III",
+    "name":       "Axe-Fx III",
+    "alias":      "axefx",
     "virtual":    False,
-    "chan":       15,
+    "chan":       14,
     "wait":       False,
     "port_id":    None,
     "port_in":    None,
@@ -29,3 +30,6 @@ axefx = {
 
 def axefx_send(type, value):
     send_cc(axefx["port_out"], axefx["chan"], axefx[type], value)
+
+def axefx_send_raw(ctrl, value):
+    send_cc(axefx["port_out"], axefx["chan"], ctrl, value)
