@@ -1,5 +1,7 @@
 import mido
 
+rtmidi_limit = 10240
+
 def send_cc(port, chan, ctrl, value):
     if port is None: return
     msg = mido.Message(

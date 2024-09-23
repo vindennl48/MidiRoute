@@ -6,6 +6,7 @@ from FighterTwister import fighter_twister, ft_load_settings, ft_save_settings
 from FighterTwister import ft_setup_callbacks, ft_push_settings
 from Axefx import axefx
 from Widi import widi, widi_setup_callbacks
+from Helpers import rtmidi_limit
 
 devices = [ fighter_twister, axefx, widi ]
 
@@ -14,7 +15,7 @@ devices = [ fighter_twister, axefx, widi ]
 ################################################################################
 def setup():
     global devices
-    available_ports = rtmidi.MidiIn()
+    available_ports = rtmidi.MidiIn(queue_size_limit=rtmidi_limit)
 
     # Print available ports to choose the specific port by name or index
     all_devices_exist = False
@@ -59,7 +60,7 @@ def setup():
     for device in devices:
         if device["virtual"]:
             print(f"--> Creating virtual port: {device['name']}")
-            device["port_in"] = rtmidi.MidiIn()
+            device["port_in"] = rtmidi.MidiIn(queue_size_limit=rtmidi_limit)
             device["port_out"] = rtmidi.MidiOut()
             device["port_in"].open_virtual_port(device["name"])
             device["port_out"].open_virtual_port(device["name"])
@@ -69,7 +70,7 @@ def setup():
         if device["virtual"]: continue
         if device["port_id"] is None: continue
 
-        device["port_in"] = rtmidi.MidiIn()
+        device["port_in"] = rtmidi.MidiIn(queue_size_limit=rtmidi_limit)
         device["port_out"] = rtmidi.MidiOut()
         device["port_in"].open_port(device["port_id"])
         device["port_out"].open_port(device["port_id"])
