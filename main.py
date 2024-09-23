@@ -1,6 +1,8 @@
 import time
 import rtmidi
 import mido
+import threading
+import tkinter as tk
 
 from FighterTwister import fighter_twister, ft_load_settings, ft_save_settings
 from FighterTwister import ft_setup_callbacks, ft_push_settings
@@ -9,6 +11,9 @@ from Widi import widi, widi_setup_callbacks
 from Helpers import rtmidi_limit
 
 devices = [ fighter_twister, axefx, widi ]
+
+exit_event    = threading.Event() # Thread exit event
+restart_event = threading.Event() # Thread restart event
 
 ################################################################################
 ## Functions ###################################################################
@@ -81,7 +86,7 @@ save_interval  = 1
 def loop():
     global last_save_time
     try:
-        while True:
+        while not exit_event.is_set():
             # save timer
             current_time = time.time()
             if current_time - last_save_time >= save_interval:
@@ -106,20 +111,52 @@ def cleanup():
         print(f"    Port closed!")
 
     print("--> All cleaned up; Goodbye!")
-    exit()
+
+def start_midi():
+    while not restart_event.is_set():
+        restart_event.set()
+        exit_event.clear()
+        setup()
+
+        ft_load_settings()
+        ft_setup_callbacks()
+        ft_push_settings()
+
+        widi_setup_callbacks()
+
+        loop()
+        cleanup()
+
+def start_gui():
+    def on_restart():
+        restart_event.clear()
+        exit_event.set()
+
+    def on_exit():
+        exit_event.set()  # Signal the main loop to exit
+        root.quit()       # Close the GUI
+
+    root = tk.Tk()
+    root.title("MIDI Translator Control")
+    root.geometry("200x200")
+
+    restart_button = tk.Button(root, text="Restart", command=on_restart)
+    restart_button.pack(pady=20)
+
+    exit_button = tk.Button(root, text="Exit", command=on_exit)
+    exit_button.pack(pady=20)
+
+    root.mainloop()
 
 
 ################################################################################
 ## Main Loop ###################################################################
 ################################################################################
 if __name__ == "__main__":
-    setup()
+    # Start the midi routing in a separate thread
+    midi_thread = threading.Thread(target=start_midi)
+    midi_thread.start()
 
-    ft_load_settings()
-    ft_setup_callbacks()
-    ft_push_settings()
+    start_gui()
 
-    widi_setup_callbacks()
-
-    loop()
-    cleanup()
+    midi_thread.join()

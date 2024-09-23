@@ -15,6 +15,7 @@ widi = {
 }
 
 def widi_setup_callbacks():
+    if widi["port_in"] is None: return
     def callback(message, data):
         msg = mm_convert(message)
 
