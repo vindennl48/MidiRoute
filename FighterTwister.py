@@ -4,8 +4,7 @@ from Axefx import axefx_send
 import mido
 
 fighter_twister = {
-    #  "name":       "Midi Fighter Twister",
-    "name":       "WIDI Bud Pro",
+    "name":       "Midi Fighter Twister",
     "alias":      "fighter_twister",
     "virtual":    False,
     "chan_value": 0,

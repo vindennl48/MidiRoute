@@ -1,6 +1,8 @@
 import time
+import queue
 import rtmidi
 import mido
+import argparse
 import threading
 import tkinter as tk
 
@@ -10,14 +12,32 @@ from Axefx import axefx
 from Widi import widi, widi_setup_callbacks
 from Helpers import rtmidi_limit
 
+#  string_queue.put(status_update)
+
+################################################################################
+## Setup #######################################################################
+################################################################################
 devices = [ fighter_twister, axefx, widi ]
+
+midi_names = {
+    "widi":            "WIDI Bud Pro",
+    "fighter_twister": "Midi Fighter Twister",
+    "mc6_pro":         "Morningstar MC6 Pro Port 1",
+    "axefx":           "Axe-Fx III",
+}
 
 exit_event    = threading.Event() # Thread exit event
 restart_event = threading.Event() # Thread restart event
+string_queue  = queue.Queue()     # Thread status queue
 
 ################################################################################
 ## Functions ###################################################################
 ################################################################################
+def log(*args):
+    args = "".join([str(arg) for arg in args])
+    string_queue.put(args)
+    print(args)
+
 def setup():
     global devices
     available_ports = rtmidi.MidiIn(queue_size_limit=rtmidi_limit)
@@ -29,11 +49,11 @@ def setup():
 
         # Print out available midi ports
         if midi_in_ports:
-            print("--> Available MIDI Input Ports:")
+            log("--> Available MIDI Input Ports:")
             for i, port_name in enumerate(midi_in_ports):
-                print(f"{i}: {port_name}")
+                log(f"{i}: {port_name}")
         else:
-            print("--> No available MIDI input ports.")
+            log("--> No available MIDI input ports.")
             time.sleep(2)
             continue
 
@@ -42,29 +62,32 @@ def setup():
         for device in devices:
             if device["virtual"]: continue
 
-            print(f"--> Selecting MIDI Port '{device['name']}' for '{device['alias']}' ..")
+            log(f"--> Selecting MIDI Port '{device['name']}' for '{device['alias']}' ..")
 
             if device["name"] in midi_in_ports:
                 device["port_id"] = midi_in_ports.index(device["name"])
-                print(f"    Success!")
+                log(f"    Success!")
             else:
-                print(f"    Could Not Find MIDI Input Port: {device['name']}..")
+                log(f"    Could Not Find MIDI Input Port: {device['name']}..")
                 if "wait" in device and not device["wait"]:
-                    print(f"    Device Ignored..")
+                    log(f"    Device Ignored..")
                 else:
                     all_devices_exist = False
                     break
 
         if not all_devices_exist:
-            print("##> Trying again..")
+            if exit_event.is_set():
+                log("--> Exiting..")
+                exit()
+            log("##> Trying again..")
             time.sleep(2)
         else:
-            print("--> All Devices Found!")
+            log("--> All Devices Found!")
 
     # Create virtual ports
     for device in devices:
         if device["virtual"]:
-            print(f"--> Creating virtual port: {device['name']}")
+            log(f"--> Creating virtual port: {device['name']}")
             device["port_in"] = rtmidi.MidiIn(queue_size_limit=rtmidi_limit)
             device["port_out"] = rtmidi.MidiOut()
             device["port_in"].open_virtual_port(device["name"])
@@ -95,22 +118,22 @@ def loop():
 
             time.sleep(0.01)
     except KeyboardInterrupt:
-        print("##> Exiting...")
+        log("##> Exiting...")
 
 def cleanup():
     # Close all ports in ports dictionary
-    print("--> Closing all ports...")
+    log("--> Closing all ports...")
     for device in devices:
-        print(f"--> Closing port: {device['name']}")
+        log(f"--> Closing port: {device['name']}")
         if device["port_in"] is not None and device["port_in"].is_port_open():
-            print(f"    Closing 'in' port")
+            log(f"    Closing 'in' port")
             device["port_in"].close_port()
         if device["port_out"] is not None and device["port_out"].is_port_open():
-            print(f"    Closing 'out' port")
+            log(f"    Closing 'out' port")
             device["port_out"].close_port()
-        print(f"    Port closed!")
+        log(f"    Port closed!")
 
-    print("--> All cleaned up; Goodbye!")
+    log("--> All cleaned up; Goodbye!")
 
 def start_midi():
     while not restart_event.is_set():
@@ -136,15 +159,31 @@ def start_gui():
         exit_event.set()  # Signal the main loop to exit
         root.quit()       # Close the GUI
 
+    # Function to update the label with the latest status from the queue
+    def update_label():
+        try:
+            # Check if there's a new string in the queue
+            status = string_queue.get_nowait()
+            status_label.config(text=status)
+        except queue.Empty:
+            pass
+        root.after(100, update_label)  # Update every 100 ms
+
     root = tk.Tk()
     root.title("MIDI Translator Control")
-    root.geometry("200x200")
+    root.geometry("300x200")
 
     restart_button = tk.Button(root, text="Restart", command=on_restart)
     restart_button.pack(pady=20)
 
     exit_button = tk.Button(root, text="Exit", command=on_exit)
     exit_button.pack(pady=20)
+
+    # Label to display the shared string
+    status_label = tk.Label(root, text="")
+    status_label.pack(side="bottom", pady=20)
+
+    update_label()
 
     root.mainloop()
 
@@ -153,6 +192,31 @@ def start_gui():
 ## Main Loop ###################################################################
 ################################################################################
 if __name__ == "__main__":
+    # setup midi devices based on argument input
+    parser = argparse.ArgumentParser(description="MIDI Translator Control")
+    
+    # Adding mutually exclusive group
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--computer', '-c', action='store_true', help='When MC6Pro is connected to computer')
+    group.add_argument('--alt',      '-a', action='store_true', help='When Fighter Twister AND MC6Pro is connected to computer separately')
+    group.add_argument('--wireless', '-w', action='store_true', default=True, help='When using Widi wireless (default)')
+    
+    args = parser.parse_args()
+
+    # Handle the arguments
+    if args.computer:
+        log("--> Computer mode selected.")
+        fighter_twister["name"] = midi_names["mc6_pro"]
+        widi["name"]            = midi_names["mc6_pro"]
+    elif args.alt:
+        fighter_twister["name"] = midi_names["fighter_twister"]
+        widi["name"]            = midi_names["mc6_pro"]
+    else:
+        log("--> Wireless mode selected.")
+        fighter_twister["name"] = midi_names["widi"]
+        widi["name"]            = midi_names["widi"]
+
+
     # Start the midi routing in a separate thread
     midi_thread = threading.Thread(target=start_midi)
     midi_thread.start()
