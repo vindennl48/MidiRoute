@@ -79,7 +79,7 @@ def setup():
             if exit_event.is_set():
                 log("--> Exiting..")
                 exit()
-            log("##> Trying again..")
+            log("##> Trying again..\n")
             time.sleep(2)
         else:
             log("--> All Devices Found!")
@@ -162,16 +162,16 @@ def start_gui():
     # Function to update the label with the latest status from the queue
     def update_label():
         try:
-            # Check if there's a new string in the queue
-            status = string_queue.get_nowait()
-            status_label.config(text=status)
+            log_message = string_queue.get_nowait()
+            log_textbox.insert(tk.END, log_message + "\n")
+            log_textbox.see(tk.END)  # Scroll to the end to always show the latest log
         except queue.Empty:
             pass
         root.after(100, update_label)  # Update every 100 ms
 
     root = tk.Tk()
     root.title("MIDI Translator Control")
-    root.geometry("300x200")
+    root.geometry("600x600")
 
     restart_button = tk.Button(root, text="Restart", command=on_restart)
     restart_button.pack(pady=20)
@@ -179,9 +179,17 @@ def start_gui():
     exit_button = tk.Button(root, text="Exit", command=on_exit)
     exit_button.pack(pady=20)
 
-    # Label to display the shared string
-    status_label = tk.Label(root, text="")
-    status_label.pack(side="bottom", pady=20)
+    # Add a text box with a scrollbar for the log
+    log_frame = tk.Frame(root)
+    log_frame.pack(pady=10, fill="both", expand=True)
+
+    scrollbar = tk.Scrollbar(log_frame)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+    log_textbox = tk.Text(log_frame, wrap=tk.WORD, yscrollcommand=scrollbar.set)
+    log_textbox.pack(side=tk.LEFT, fill="both", expand=True)
+
+    scrollbar.config(command=log_textbox.yview)
 
     update_label()
 
