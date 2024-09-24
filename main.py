@@ -77,7 +77,7 @@ def setup():
 
         if not all_devices_exist:
             if exit_event.is_set():
-                log("--> Exiting..")
+                log("##> Exiting..")
                 exit()
             log("##> Trying again..\n")
             time.sleep(2)
@@ -118,7 +118,7 @@ def loop():
 
             time.sleep(0.01)
     except KeyboardInterrupt:
-        log("##> Exiting...")
+        log("##> Exiting Backend...")
 
 def cleanup():
     # Close all ports in ports dictionary
@@ -150,10 +150,40 @@ def start_midi():
         loop()
         cleanup()
 
+def mode_wireless():
+    log("--> Wireless mode selected.")
+    fighter_twister["name"] = midi_names["widi"]
+    widi["name"]            = midi_names["widi"]
+
+def mode_computer():
+    log("--> Computer mode selected.")
+    fighter_twister["name"] = midi_names["mc6_pro"]
+    widi["name"]            = midi_names["mc6_pro"]
+
+def mode_alt():
+    log("--> Alternative mode selected.")
+    fighter_twister["name"] = midi_names["fighter_twister"]
+    widi["name"]            = midi_names["mc6_pro"]
+
 def start_gui():
-    def on_restart():
+    def restart_backend():
         restart_event.clear()
         exit_event.set()
+
+    def on_restart_wireless():
+        log("--> Restarting with Wireless")
+        mode_wireless()
+        restart_backend()
+
+    def on_restart_computer():
+        log("--> Restarting with Computer")
+        mode_computer()
+        restart_backend()
+
+    def on_restart_alt():
+        log("--> Restarting with Alt")
+        mode_alt()
+        restart_backend()
 
     def on_exit():
         exit_event.set()  # Signal the main loop to exit
@@ -167,14 +197,31 @@ def start_gui():
             log_textbox.see(tk.END)  # Scroll to the end to always show the latest log
         except queue.Empty:
             pass
-        root.after(100, update_label)  # Update every 100 ms
+        root.after(22, update_label)  # Update every 100 ms
 
     root = tk.Tk()
     root.title("MIDI Translator Control")
     root.geometry("600x600")
 
-    restart_button = tk.Button(root, text="Restart", command=on_restart)
-    restart_button.pack(pady=20)
+    #  restart_button = tk.Button(root, text="Restart", command=on_restart)
+    #  restart_button.pack(pady=20)
+
+    # Label above the buttons
+    restart_label = tk.Label(root, text="Restart", font=("Helvetica", 14))
+    restart_label.pack(pady=10)
+
+    # Frame for the three buttons (Wireless, Computer, Alt)
+    button_frame = tk.Frame(root)
+    button_frame.pack(pady=5)
+
+    wireless_button = tk.Button(button_frame, text="Wireless", command=on_restart_wireless)
+    wireless_button.pack(side=tk.LEFT, padx=10)
+
+    computer_button = tk.Button(button_frame, text="Computer", command=on_restart_computer)
+    computer_button.pack(side=tk.LEFT, padx=10)
+
+    alt_button = tk.Button(button_frame, text="Alt", command=on_restart_alt)
+    alt_button.pack(side=tk.LEFT, padx=10)
 
     exit_button = tk.Button(root, text="Exit", command=on_exit)
     exit_button.pack(pady=20)
