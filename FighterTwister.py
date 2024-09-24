@@ -4,8 +4,8 @@ from Axefx import axefx_send
 import mido
 
 fighter_twister = {
-    "name":       "Midi Fighter Twister",
-    #  "name":       "WIDI Bud Pro",
+    #  "name":       "Midi Fighter Twister",
+    "name":       "WIDI Bud Pro",
     "alias":      "fighter_twister",
     "virtual":    False,
     "chan_value": 0,
@@ -118,7 +118,6 @@ def ft_save_settings():
 
 def callback(message, data):
     msg = mm_convert(message)
-    #  print(f"--> Fighter Twister: {msg}")
     if msg.type != "control_change": return
     if "force" not in data: data["force"] = False
 

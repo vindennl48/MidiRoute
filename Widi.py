@@ -8,7 +8,7 @@ widi = {
     "alias":      "widi",
     "virtual":    False,
     "chan":       13,
-    "wait":       False,
+    "wait":       True,
     "port_id":    None,
     "port_in":    None,
     "port_out":   None,
