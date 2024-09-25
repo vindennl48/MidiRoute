@@ -1,6 +1,6 @@
 from Helpers import send_cc, mm_convert
 from Axefx import axefx, axefx_send_raw
-from FighterTwister import fighter_twister, ft_update_value
+from FighterTwister import fighter_twister, ft_update_value, ft_send_raw
 from FighterTwister import callback as ft_callback
 
 widi = {
@@ -30,8 +30,11 @@ def widi_setup_callbacks():
 
         ## DESTINATION FIGHTER TWISTER ##
         ## BUT INCOMING FROM MORNINGSTAR ##
-        elif fighter_twister["name"] != widi["name"]:
-            if msg.channel == fighter_twister["chan_value"]:
+        elif msg.channel == fighter_twister["chan_value"] or \
+                msg.channel == fighter_twister["chan_press"] or \
+                msg.channel == fighter_twister["chan_color"] or \
+                msg.channel == fighter_twister["chan_brit"]:
+            if fighter_twister["name"] != widi["name"]:
                 ft_callback(message, data)
 
     widi["port_in"].set_callback(callback, {})

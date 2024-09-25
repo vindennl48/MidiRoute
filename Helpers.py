@@ -13,6 +13,17 @@ def send_cc(port, chan, ctrl, value):
     )
     port.send_message(msg.bytes())
 
+def send_note(port, chan, note, value):
+    if port is None: return
+    msg = mido.Message(
+        "note_on",
+        channel = int(chan),
+        note    = int(note),
+        value   = int(value),
+        time    = 0
+    )
+    port.send_message(msg.bytes())
+
 def mm_convert(message):
     midi_message, timestamp = message
     return mido.parse(midi_message)

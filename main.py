@@ -1,18 +1,15 @@
 import time
 import queue
 import rtmidi
-import mido
 import argparse
 import threading
 import tkinter as tk
 
+from Helpers import rtmidi_limit
 from FighterTwister import fighter_twister, ft_load_settings, ft_save_settings
 from FighterTwister import ft_setup_callbacks, ft_push_settings
 from Axefx import axefx
 from Widi import widi, widi_setup_callbacks
-from Helpers import rtmidi_limit
-
-#  string_queue.put(status_update)
 
 ################################################################################
 ## Setup #######################################################################
@@ -92,6 +89,10 @@ def setup():
             device["port_out"] = rtmidi.MidiOut()
             device["port_in"].open_virtual_port(device["name"])
             device["port_out"].open_virtual_port(device["name"])
+            if device["port_in"].is_port_open():
+                log(f"    Success!")
+            else:
+                log(f"    Failed!")
 
     # Open up all ports
     for device in devices:

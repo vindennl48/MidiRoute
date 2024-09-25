@@ -33,6 +33,12 @@ ft_settings  = None
 
 ft_callbacks = []
 
+def ft_send(type, value):
+    send_cc(fighter_twister["port_out"], fighter_twister["chan"], fighter_twister[type], value)
+
+def ft_send_raw(ctrl, value):
+    send_cc(fighter_twister["port_out"], fighter_twister["chan"], ctrl, value)
+
 def ft_get_knob(id):
     i = next((idx for (idx, d) in enumerate(ft_save_data) if d["id"] == id), None)
     if i is not None:
@@ -106,7 +112,7 @@ def ft_update_brit(id, brit, force=False):
 def ft_load_settings():
     global ft_settings
     global ft_save_data
-    ft_settings  = Settings("settings.json", [])
+    ft_settings  = Settings("/Users/mitch/Documents/Code/Python/MidiRoute/settings.json", [])
     ft_save_data = sorted(ft_settings.json, key=lambda d: d['id'])
 
 def ft_save_settings():
@@ -150,6 +156,13 @@ def ft_push_settings():
 ################################################################################
 ## Callbacks ###################################################################
 ################################################################################
+def ftc_daw(type, ctrl, value, force=False):
+    if type != "value": return
+
+    if ctrl >= 0 and ctrl < 16:
+        ft_push_value(ctrl, value)
+ft_callbacks.append(ftc_daw)
+
 def ftc_amp_tone(type, ctrl, value, force=False):
     if type != "value": return
 
