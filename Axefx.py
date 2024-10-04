@@ -1,4 +1,4 @@
-from Helpers import send_cc
+from Helpers import send_cc, send_pc
 
 axefx = {
     "name":       "Axe-Fx III",
@@ -33,3 +33,6 @@ def axefx_send(type, value):
 
 def axefx_send_raw(ctrl, value):
     send_cc(axefx["port_out"], axefx["chan"], ctrl, value)
+
+def axefx_send_pc(program):
+    send_pc(axefx["port_out"], axefx["chan"], program)

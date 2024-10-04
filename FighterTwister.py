@@ -125,6 +125,7 @@ def callback(message, data):
     msg = mm_convert(message)
     if msg.type != "control_change": return
     if "force" not in data: data["force"] = False
+    if "send_to_axe" not in data: data["send_to_axe"] = True
 
     for cb in ft_callbacks:
         type = None
@@ -134,7 +135,7 @@ def callback(message, data):
             type = "press"
 
         if type is not None:
-            cb(type, msg.control, msg.value, data["force"])
+            cb(type, msg.control, msg.value, data["force"], data["send_to_axe"])
 
 def ft_setup_callbacks():
     fighter_twister["port_in"].set_callback(callback, {})
@@ -156,14 +157,14 @@ def ft_push_settings():
 ################################################################################
 ## Callbacks ###################################################################
 ################################################################################
-def ftc_daw(type, ctrl, value, force=False):
+def ftc_daw(type, ctrl, value, force=False, send_to_axe=True):
     if type != "value": return
 
     if ctrl >= 0 and ctrl < 16:
         ft_push_value(ctrl, value)
 ft_callbacks.append(ftc_daw)
 
-def ftc_amp_tone(type, ctrl, value, force=False):
+def ftc_amp_tone(type, ctrl, value, force=False, send_to_axe=True):
     if type != "value": return
 
     cc = None
@@ -172,10 +173,11 @@ def ftc_amp_tone(type, ctrl, value, force=False):
     elif ctrl == 18: cc = "dist_tone_exp"
 
     if cc is not None:
-        if ft_update_value(ctrl, value, force): axefx_send(cc, value)
+        if ft_update_value(ctrl, value, force) and send_to_axe:
+            axefx_send(cc, value)
 ft_callbacks.append(ftc_amp_tone)
 
-def ftc_reset(type, ctrl, value, force=False):
+def ftc_reset(type, ctrl, value, force=False, send_to_axe=True):
     id = [5, 21]
     if ctrl not in id: return
 
@@ -183,95 +185,110 @@ def ftc_reset(type, ctrl, value, force=False):
         ft_push_settings()
 ft_callbacks.append(ftc_reset)
 
-def ftc_pitch_1(type, ctrl, value, force=False):
+def ftc_pitch_1(type, ctrl, value, force=False, send_to_axe=True):
     id    = 24
     split = 4
     if ctrl != id: return
 
     if type == "value":
         split_val = select_split(value, split)
-        if ft_update_value(id, value, force): axefx_send("pitch_1_chan", split_val)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("pitch_1_chan", split_val)
         ft_update_color(id, ring(color_wheel, split_val), force)
 
         if value > 0:
-            if ft_update_brit(id, 30, force): axefx_send("pitch_1_byp", 127)
+            if ft_update_brit(id, 30, force) and send_to_axe:
+                axefx_send("pitch_1_byp", 127)
         else:
-            if ft_update_brit(id, 15, force): axefx_send("pitch_1_byp", 0)
+            if ft_update_brit(id, 10, force) and send_to_axe:
+                axefx_send("pitch_1_byp", 0)
 
     elif type == "press":
         pass
 ft_callbacks.append(ftc_pitch_1)
 
-def ftc_megatap_1(type, ctrl, value, force=False):
+def ftc_megatap_1(type, ctrl, value, force=False, send_to_axe=True):
     id    = 25
     split = 2
     if ctrl != id: return
 
     if type == "value":
         split_val = select_split(value, split)
-        if ft_update_value(id, value, force): axefx_send("megatap_1_chan", split_val)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("megatap_1_chan", split_val)
         ft_update_color(id, ring(color_wheel, split_val), force)
 
         if value > 0:
-            if ft_update_brit(id, 30, force): axefx_send("megatap_1_byp", 127)
+            if ft_update_brit(id, 30, force) and send_to_axe:
+                axefx_send("megatap_1_byp", 127)
         else:
-            if ft_update_brit(id, 15, force): axefx_send("megatap_1_byp", 0)
+            if ft_update_brit(id, 10, force) and send_to_axe:
+                axefx_send("megatap_1_byp", 0)
 
     elif type == "press":
         pass
 ft_callbacks.append(ftc_megatap_1)
 
-def ftc_delay_1(type, ctrl, value, force=False):
+def ftc_delay_1(type, ctrl, value, force=False, send_to_axe=True):
     id    = 26
     split = 4
     if ctrl != id: return
 
     if type == "value":
         split_val = select_split(value, split)
-        if ft_update_value(id, value, force): axefx_send("delay_1_chan", split_val)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("delay_1_chan", split_val)
         ft_update_color(id, ring(color_wheel, split_val), force)
-
-        if value > 0:
-            if ft_update_brit(id, 30, force): axefx_send("delay_1_byp", 127)
-        else:
-            if ft_update_brit(id, 15, force): axefx_send("delay_1_byp", 0)
+        #  ft_update_brit(id, 30, force)
 
     elif type == "press":
-        pass
+        if value > 0:
+            ft_update_brit(id, 30, force)
+        else:
+            ft_update_brit(id, 10, force)
+
 ft_callbacks.append(ftc_delay_1)
 
-def ftc_reverb_1(type, ctrl, value, force=False):
+def ftc_reverb_1(type, ctrl, value, force=False, send_to_axe=True):
     id    = 27
     split = 4
     if ctrl != id: return
 
     if type == "value":
         split_val = select_split(value, split)
-        if ft_update_value(id, value, force): axefx_send("reverb_1_chan", split_val)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("reverb_1_chan", split_val)
         ft_update_color(id, ring(color_wheel, split_val), force)
         ft_update_brit(id, 30, force)
+
+        #  if value > 0:
+            #  ft_update_brit(id, 30, force)
+        #  else:
+            #  ft_update_brit(id, 10, force)
 
     elif type == "press":
         pass
 ft_callbacks.append(ftc_reverb_1)
 
-def ftc_reverb_exp(type, ctrl, value, force=False):
+def ftc_reverb_exp(type, ctrl, value, force=False, send_to_axe=True):
     id = 30
     if ctrl != id: return
 
     if type == "value":
-        if ft_update_value(id, value, force): axefx_send("reverb_exp", value)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("reverb_exp", value)
 
     elif type == "press":
         pass
 ft_callbacks.append(ftc_reverb_exp)
 
-def ftc_volume_exp(type, ctrl, value, force=False):
+def ftc_volume_exp(type, ctrl, value, force=False, send_to_axe=True):
     id = 31
     if ctrl != id: return
 
     if type == "value":
-        if ft_update_value(id, value, force): axefx_send("volume_exp", value)
+        if ft_update_value(id, value, force) and send_to_axe:
+            axefx_send("volume_exp", value)
 
     elif type == "press":
         pass

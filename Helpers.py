@@ -13,6 +13,16 @@ def send_cc(port, chan, ctrl, value):
     )
     port.send_message(msg.bytes())
 
+def send_pc(port, chan, program):
+    if port is None: return
+    msg = mido.Message(
+        "program_change",
+        channel = int(chan),
+        program = int(program),
+        time    = 0
+    )
+    port.send_message(msg.bytes())
+
 def send_note(port, chan, note, value):
     if port is None: return
     msg = mido.Message(

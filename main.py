@@ -50,6 +50,9 @@ def setup():
             for i, port_name in enumerate(midi_in_ports):
                 log(f"{i}: {port_name}")
         else:
+            if restart_event.is_set() or exit_event.is_set():
+                log("##> Exiting..")
+                return False
             log("--> No available MIDI input ports.")
             time.sleep(2)
             continue
@@ -73,9 +76,9 @@ def setup():
                     break
 
         if not all_devices_exist:
-            if exit_event.is_set():
+            if restart_event.is_set() or exit_event.is_set():
                 log("##> Exiting..")
-                exit()
+                return False
             log("##> Trying again..\n")
             time.sleep(2)
         else:
@@ -104,13 +107,15 @@ def setup():
         device["port_in"].open_port(device["port_id"])
         device["port_out"].open_port(device["port_id"])
 
+    return True
+
 # for save timer
 last_save_time = time.time()
 save_interval  = 1
 def loop():
     global last_save_time
     try:
-        while not exit_event.is_set():
+        while not restart_event.is_set() and not exit_event.is_set():
             # save timer
             current_time = time.time()
             if current_time - last_save_time >= save_interval:
@@ -137,19 +142,17 @@ def cleanup():
     log("--> All cleaned up; Goodbye!")
 
 def start_midi():
-    while not restart_event.is_set():
-        restart_event.set()
-        exit_event.clear()
-        setup()
+    while not exit_event.is_set():
+        restart_event.clear()
+        if setup():
+            ft_load_settings()
+            ft_setup_callbacks()
+            ft_push_settings()
 
-        ft_load_settings()
-        ft_setup_callbacks()
-        ft_push_settings()
+            widi_setup_callbacks()
 
-        widi_setup_callbacks()
-
-        loop()
-        cleanup()
+            loop()
+            cleanup()
 
 def mode_wireless():
     log("--> Wireless mode selected.")
@@ -168,8 +171,7 @@ def mode_alt():
 
 def start_gui():
     def restart_backend():
-        restart_event.clear()
-        exit_event.set()
+        restart_event.set()
 
     def on_restart_wireless():
         log("--> Restarting with Wireless")
