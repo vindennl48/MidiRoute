@@ -263,16 +263,19 @@ if __name__ == "__main__":
 
     # Handle the arguments
     if args.computer:
-        log("--> Computer mode selected.")
-        fighter_twister["name"] = midi_names["mc6_pro"]
-        widi["name"]            = midi_names["mc6_pro"]
+        mode_computer()
+        #  log("--> Computer mode selected.")
+        #  fighter_twister["name"] = midi_names["mc6_pro"]
+        #  widi["name"]            = midi_names["mc6_pro"]
     elif args.alt:
-        fighter_twister["name"] = midi_names["fighter_twister"]
-        widi["name"]            = midi_names["mc6_pro"]
+        mode_alt()
+        #  fighter_twister["name"] = midi_names["fighter_twister"]
+        #  widi["name"]            = midi_names["mc6_pro"]
     else:
-        log("--> Wireless mode selected.")
-        fighter_twister["name"] = midi_names["widi"]
-        widi["name"]            = midi_names["widi"]
+        mode_wireless()
+        #  log("--> Wireless mode selected.")
+        #  fighter_twister["name"] = midi_names["widi"]
+        #  widi["name"]            = midi_names["widi"]
 
 
     # Start the midi routing in a separate thread

@@ -28,12 +28,13 @@ def widi_setup_callbacks():
 
                 # update knobs on fighter twister
                 if msg.control == axefx["scene"]:
-                    ftc_delay_1("value", 26, 0, True, False)
-                    ftc_delay_1("press", 26, 0, True, False)
+                    ftc_delay_1("value", 26, None, True, True) # keep delay setting set
+                    ftc_delay_1("press", 26, 0, True, False) # turn off delay
 
-                    ftc_reverb_1("value", 27, 0, True, False)
+                    ftc_reverb_1("value", 27, 0, True, False) # reset reverb knob
 
                 elif msg.control == axefx["delay_1_byp"]:
+                    # if we send delay byp from MC6, update knob
                     ftc_delay_1("press", 26, msg.value, True, False)
 
                 # send volume and reverb to fighter twister

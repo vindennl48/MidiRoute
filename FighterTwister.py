@@ -164,18 +164,18 @@ def ftc_daw(type, ctrl, value, force=False, send_to_axe=True):
         ft_push_value(ctrl, value)
 ft_callbacks.append(ftc_daw)
 
-def ftc_amp_tone(type, ctrl, value, force=False, send_to_axe=True):
-    if type != "value": return
-
-    cc = None
-    if ctrl == 16:   cc = "clean_high_exp"
-    elif ctrl == 17: cc = "dist_high_exp"
-    elif ctrl == 18: cc = "dist_tone_exp"
-
-    if cc is not None:
-        if ft_update_value(ctrl, value, force) and send_to_axe:
-            axefx_send(cc, value)
-ft_callbacks.append(ftc_amp_tone)
+#  def ftc_amp_tone(type, ctrl, value, force=False, send_to_axe=True):
+#      if type != "value": return
+#
+#      cc = None
+#      if ctrl == 16:   cc = "clean_high_exp"
+#      elif ctrl == 17: cc = "dist_high_exp"
+#      elif ctrl == 18: cc = "dist_tone_exp"
+#
+#      if cc is not None:
+#          if ft_update_value(ctrl, value, force) and send_to_axe:
+#              axefx_send(cc, value)
+#  ft_callbacks.append(ftc_amp_tone)
 
 def ftc_reset(type, ctrl, value, force=False, send_to_axe=True):
     id = [5, 21]
@@ -235,9 +235,15 @@ def ftc_delay_1(type, ctrl, value, force=False, send_to_axe=True):
     if ctrl != id: return
 
     if type == "value":
+        knob = ft_get_knob(id)
+        if knob is None: knob = {"value": 0}
+        value = value if value is not None else knob["value"]
+
         split_val = select_split(value, split)
+
         if ft_update_value(id, value, force) and send_to_axe:
             axefx_send("delay_1_chan", split_val)
+
         ft_update_color(id, ring(color_wheel, split_val), force)
         #  ft_update_brit(id, 30, force)
 
