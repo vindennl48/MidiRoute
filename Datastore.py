@@ -1,3 +1,4 @@
+from Helpers import clamp
 from Devices import Devices
 from Files import Settings
 
@@ -48,11 +49,12 @@ class Datastore:
                 is_different = False
 
             if (push and is_different) or force_push:
-                Devices.send_midi("cc", "fighter_twister", {
-                    "channel": Devices.devices["fighter_twister"]["chan_value"],
-                    "control": id,
-                    "value":   knob["value"],
-                })
+                if knob["value"] is not None:
+                    Devices.send_midi("cc", "fighter_twister", {
+                        "channel": Devices.devices["fighter_twister"]["chan_value"],
+                        "control": id,
+                        "value":   knob["value"],
+                    })
 
         if "color" in data:
             if data["color"] is not None:
@@ -64,11 +66,12 @@ class Datastore:
                 is_different = False
 
             if (push and is_different) or force_push:
-                Devices.send_midi("cc", "fighter_twister", {
-                    "channel": Devices.devices["fighter_twister"]["chan_color"],
-                    "control": id,
-                    "value":   knob["color"],
-                })
+                if knob["color"] is not None:
+                    Devices.send_midi("cc", "fighter_twister", {
+                        "channel": Devices.devices["fighter_twister"]["chan_color"],
+                        "control": id,
+                        "value":   knob["color"],
+                    })
 
         if "brightness" in data:
             if data["brightness"] is not None:
@@ -80,11 +83,12 @@ class Datastore:
                 is_different = False
 
             if (push and is_different) or force_push:
-                Devices.send_midi("cc", "fighter_twister", {
-                    "channel": Devices.devices["fighter_twister"]["chan_brit"],
-                    "control": id,
-                    "value":   knob["brightness"],
-                })
+                if knob["brightness"] is not None:
+                    Devices.send_midi("cc", "fighter_twister", {
+                        "channel": Devices.devices["fighter_twister"]["chan_brit"],
+                        "control": id,
+                        "value":   clamp(0, knob["brightness"], 30) + 17,
+                    })
 
         if set_knob:
             Datastore._set_knob(id, knob)

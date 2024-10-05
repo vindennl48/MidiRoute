@@ -1,4 +1,5 @@
 import mido
+from Log import Log
 
 class Devices:
     devices = {
@@ -44,7 +45,7 @@ class Devices:
             "volume_exp":     127,
         },
 
-        "widi": {
+        "mc6_pro": {
             "name":       "WIDI Bud Pro",
             "alias":      "mc6_pro",
             "virtual":    False,
@@ -59,13 +60,18 @@ class Devices:
     @staticmethod
     def send_midi(type, device_name, data):
         msg = None
+        if device_name not in Devices.devices:
+            Log.log(f"##> Devices.send_midi: Device not found: {device_name}")
+            Log.log(f"    Will not send message: {str(data)}")
+            return False
 
         if type in ["cc", "note"]:
-            if "channel" not in data or \
-                "control" not in data or \
-                "value" not in data:
+            if "channel" not in data or data["channel"] is None or \
+                "control" not in data or data["control"] is None or \
+                "value" not in data or data["value"] is None:
                 return False
 
+            #  Log.log(f"--> Devices.send_midi: Sending message: {str(data)}")
             msg = mido.Message(
                 "control_change",
                 channel = int(data["channel"]),
@@ -86,5 +92,14 @@ class Devices:
                 time    = 0
             )
 
-        if msg is not None and Devices.devices[device_name]["port_out"] is not None:
-            Devices.devices[device_name]["port_out"].send(msg)
+        if msg is None:
+            Log.log(f"##> Devices.send_midi: Unknown message type: {type}")
+            return False
+        if Devices.devices[device_name]["port_out"] is None:
+            #  Log.log(f"##> Devices.send_midi: Device not connected: {device_name}")
+            return False
+        if Devices.devices[device_name]["port_out"].is_port_open() is False:
+            #  Log.log(f"##> Devices.send_midi: Device not connected: {device_name}")
+            return False
+
+        Devices.devices[device_name]["port_out"].send_message(msg.bytes())
