@@ -50,6 +50,7 @@ def ft_callback(message, data):
     ctrl       = msg.control
     value      = msg.value
     force_push = data["force_push"] if "force_push" in data else False
+    block_push = data["block_push"] if "block_push" in data else False
 
     chan_value = fighter_twister["chan_value"]
     chan_press = fighter_twister["chan_press"]
@@ -70,21 +71,23 @@ def ft_callback(message, data):
             if Datastore.save_knob_data(ctrl, {
                 "value":      value,
                 "color":      color,
-                "brightness": BRIGHT if value > 0 else DIM,
+                #  "brightness": BRIGHT if value > 0 else DIM,
             }) or force_push:
                 Devices.send_midi("cc", "axefx", {
                     "channel": axefx["chan"],
                     "control": axefx["delay_1_chan"],
                     "value":   split_val,
+                    "block_push": block_push,
                 })
 
             # make sure axe is in sync with block bypass
             if force_push:
                 knob = Datastore.get_knob(ctrl)
                 Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["delay_1_byp"],
-                    "value":   127 if knob["brightness"] == BRIGHT else 0,
+                    "channel":    axefx["chan"],
+                    "control":    axefx["delay_1_byp"],
+                    "value":      127 if knob["brightness"] == BRIGHT else 0,
+                    "block_push": block_push,
                 })
 
     elif ctrl == CTRL_REVERB_1:
@@ -98,9 +101,10 @@ def ft_callback(message, data):
                 "brightness": BRIGHT, # reverb is always on
             }) or force_push:
                 Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["reverb_1_chan"],
-                    "value":   split_val,
+                    "channel":    axefx["chan"],
+                    "control":    axefx["reverb_1_chan"],
+                    "value":      split_val,
+                    "block_push": block_push,
                 })
 
     elif ctrl == CTRL_REVERB_EXP:
@@ -109,9 +113,10 @@ def ft_callback(message, data):
                 "value": value,
             }) or force_push:
                 Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["reverb_exp"],
-                    "value":   value,
+                    "channel":    axefx["chan"],
+                    "control":    axefx["reverb_exp"],
+                    "value":      value,
+                    "block_push": block_push,
                 })
 
     elif ctrl == CTRL_VOLUME_EXP:
@@ -120,9 +125,10 @@ def ft_callback(message, data):
                 "value": value,
             }) or force_push:
                 Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["volume_exp"],
-                    "value":   value,
+                    "channel":    axefx["chan"],
+                    "control":    axefx["volume_exp"],
+                    "value":      value,
+                    "block_push": block_push,
                 })
 
     elif ctrl == CTRL_RESET_1:
@@ -136,9 +142,10 @@ def ft_callback(message, data):
     elif ctrl == CTRL_COLOR_TEST:
         if chan == chan_value:
             Devices.send_midi("cc", "fighter_twister", {
-                "channel": fighter_twister["chan_color"],
-                "control": ctrl,
-                "value":   value,
+                "channel":    fighter_twister["chan_color"],
+                "control":    ctrl,
+                "value":      value,
+                "block_push": block_push,
             })
             Log.log(f"--> Color test: {value}")
 
@@ -146,3 +153,16 @@ p_ft_callback = ft_callback
 
 def ft_setup_callback():
     fighter_twister["port_in"].set_callback(ft_callback, {})
+
+def ft_manual_callback(type, chan, ctrl, value, force_push=False, block_push=False):
+    knob = Datastore.get_knob(ctrl)
+
+    ft_callback((mido.Message(
+        type,
+        channel = chan,
+        control = ctrl,
+        value   = value if value is not None else knob["value"]
+    ).bytes(), 0), {
+        "force_push": force_push,
+        "block_push": block_push
+    })

@@ -1,23 +1,26 @@
 import mido
+from Log import Log
 from Helpers import mm_convert, select_split
 from Devices import Devices
 from Datastore import Datastore
 from FighterTwister import DIM, BRIGHT, CTRL_DELAY_1, CTRL_REVERB_1
 from FighterTwister import CTRL_REVERB_EXP, CTRL_VOLUME_EXP
-from FighterTwister import ft_callback
+from FighterTwister import ft_callback, ft_manual_callback
 
 fighter_twister = Devices.devices["fighter_twister"]
 axefx           = Devices.devices["axefx"]
 mc6_pro         = Devices.devices["mc6_pro"]
 
 def mc6_callback(message, data):
-    msg        = mm_convert(message)
-    type       = msg.type
-    chan       = msg.channel
-    program    = msg.program
-    ctrl       = msg.control
-    value      = msg.value
-    force_push = data["force_push"] if "force_push" in data else False
+    msg             = mm_convert(message)
+    type            = msg.type
+    chan            = msg.channel
+    try:    program = msg.program
+    except: program = None
+    try:    ctrl    = msg.control
+    except: ctrl    = None
+    value           = msg.value
+    force_push      = data["force_push"] if "force_push" in data else False
 
     if chan == axefx["chan"]:
         if type == "control_change":
@@ -29,20 +32,25 @@ def mc6_callback(message, data):
 
             if ctrl == axefx["scene"]:
                 # delay_1
-                knob = Datastore.get_knob(CTRL_DELAY_1)
                 Datastore.save_knob_data(CTRL_DELAY_1, {
                     "brightness": DIM,
                 })
-                Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["delay_1_chan"],
-                    "value":   select_split(knob["value"], 4),
-                })
+                ft_manual_callback(
+                    type       = "control_change",
+                    chan       = fighter_twister["chan_value"],
+                    ctrl       = CTRL_DELAY_1,
+                    value      = None, # send stored value
+                    force_push = True  # force push to axefx
+                )
 
                 # reverb_1
-                Datastore.save_knob_data(CTRL_REVERB_1, {
-                    "value": 0,
-                })
+                ft_manual_callback(
+                    type       = "control_change",
+                    chan       = fighter_twister["chan_value"],
+                    ctrl       = CTRL_REVERB_1,
+                    value      = 0,   # reset channel select
+                    block_push = True # don't push to axefx
+                )
 
             elif ctrl == axefx["delay_1_byp"]:
                 Datastore.save_knob_data(CTRL_DELAY_1, {

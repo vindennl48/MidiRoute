@@ -59,6 +59,8 @@ class Devices:
 
     @staticmethod
     def send_midi(type, device_name, data):
+        if "block_push" in data and data["block_push"]: return
+
         msg = None
         if device_name not in Devices.devices:
             Log.log(f"##> Devices.send_midi: Device not found: {device_name}")
