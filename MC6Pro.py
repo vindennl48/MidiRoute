@@ -12,15 +12,22 @@ axefx           = Devices.devices["axefx"]
 mc6_pro         = Devices.devices["mc6_pro"]
 
 def mc6_callback(message, data):
-    msg             = mm_convert(message)
-    type            = msg.type
-    chan            = msg.channel
-    try:    program = msg.program
-    except: program = None
-    try:    ctrl    = msg.control
-    except: ctrl    = None
-    value           = msg.value
-    force_push      = data["force_push"] if "force_push" in data else False
+    msg        = mm_convert(message)
+    type       = msg.type
+    chan       = msg.channel
+    force_push = data["force_push"] if "force_push" in data else False
+
+    if type == "program_change":
+        prog = msg.program
+    else:
+        prog = None
+
+    if type == "control_change":
+        ctrl = msg.control
+        value = msg.value
+    else:
+        ctrl  = None
+        value = None
 
     if chan == axefx["chan"]:
         if type == "control_change":
@@ -70,7 +77,7 @@ def mc6_callback(message, data):
         elif type == "program_change":
             Devices.send_midi("pc", "axefx", {
                 "channel": chan,
-                "program": program,
+                "program": prog,
             })
 
     # if fighter twister is NOT plugged into MC6, and we are sending the FT data
