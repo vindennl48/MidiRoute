@@ -36,12 +36,13 @@ def ft_push_settings():
     for knob in Datastore.datastore:
         Datastore.save_knob_data(knob["id"], knob, force_push=True)
         # make sure to run logic to push to axefx
-        p_ft_callback((mido.Message(
-            "control_change",
-            channel = fighter_twister["chan_value"],
-            control = knob["id"],
-            value   = knob["value"]
-        ).bytes(), 0), {"force_push": True})
+        if knob["value"] is not None:
+            p_ft_callback((mido.Message(
+                "control_change",
+                channel = fighter_twister["chan_value"],
+                control = knob["id"],
+                value   = knob["value"]
+            ).bytes(), 0), {"force_push": True})
 
 def ft_callback(message, data):
     msg        = mm_convert(message)

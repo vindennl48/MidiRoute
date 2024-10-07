@@ -16,7 +16,7 @@ class Datastore:
         i = next((idx for (idx, d) in enumerate(Datastore.datastore) if d["id"] == id), None)
         if i is not None:
             return Datastore.datastore[i]
-        return { "id": id, "value": None, "color": None, "brightness": None }
+        return { "id": id, "value": None, "color": None, "brightness": None, "is_pulsing": False }
 
     @staticmethod
     def _set_knob(id, data):
@@ -73,6 +73,28 @@ class Datastore:
                         "value":   knob["color"],
                     })
 
+        if "is_pulsing" in data:
+            if data["is_pulsing"] is not None:
+                is_different = True if knob["is_pulsing"] != data["is_pulsing"] else False
+                set_knob     = True if is_different else set_knob
+
+                knob["is_pulsing"] = data["is_pulsing"]
+            else:
+                is_different = False
+
+            if (push and is_different) or force_push:
+                if knob["is_pulsing"]:
+                    brit = 11
+                elif knob["brightness"] is not None:
+                    brit = clamp(0, knob["brightness"], 30) + 17
+                else:
+                    brit = 9
+                Devices.send_midi("cc", "fighter_twister", {
+                    "channel": Devices.devices["fighter_twister"]["chan_brit"],
+                    "control": id,
+                    "value":   brit
+                })
+
         if "brightness" in data:
             if data["brightness"] is not None:
                 is_different = True if knob["brightness"] != data["brightness"] else False
@@ -83,11 +105,11 @@ class Datastore:
                 is_different = False
 
             if (push and is_different) or force_push:
-                if knob["brightness"] is not None:
+                if knob["brightness"] is not None and not knob["is_pulsing"]:
                     Devices.send_midi("cc", "fighter_twister", {
                         "channel": Devices.devices["fighter_twister"]["chan_brit"],
                         "control": id,
-                        "value":   clamp(0, knob["brightness"], 30) + 17,
+                        "value":   clamp(0, knob["brightness"], 30) + 17
                     })
 
         if set_knob:
