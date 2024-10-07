@@ -8,6 +8,7 @@ import tkinter as tk
 from Log import Log
 from Devices import Devices
 from Datastore import Datastore
+from TimeRelease import TimeRelease
 from Helpers import rtmidi_limit
 from FighterTwister import ft_setup_callback, ft_push_settings
 from MC6Pro import mc6_setup_callback
@@ -124,6 +125,8 @@ def loop():
             if current_time - last_save_time >= save_interval:
                 Datastore.save() # call the save function
                 last_save_time = current_time  # Reset the timer
+
+            TimeRelease.run_callbacks()
 
             time.sleep(0.01)
     except KeyboardInterrupt:

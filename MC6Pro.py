@@ -3,6 +3,7 @@ from Log import Log
 from Helpers import mm_convert, select_split
 from Devices import Devices
 from Datastore import Datastore
+from TimeRelease import TimeRelease
 from FighterTwister import COLORS
 from FighterTwister import DIM, BRIGHT, CTRL_DELAY_1, CTRL_REVERB_1
 from FighterTwister import CTRL_REVERB_EXP, CTRL_VOLUME_EXP
@@ -81,20 +82,19 @@ def mc6_callback(message, data):
                 "program": prog,
             })
             if prog == 1:
-                for i in range(16, 16+8):
-                    Datastore.save_knob_data(i, {
-                        "color":      COLORS["red"],
-                        "is_pulsing": True,
-                    })
-                    time.sleep(0.05)
+                for i in range(0, 8):
+                    TimeRelease.add_callback(
+                        func = Datastore.save_knob_data,
+                        data = {"id": i+16, "data": {"color": COLORS["red"], "is_pulsing": True}},
+                        time = 0.05 * i
+                    )
             else:
-                for i in range(16, 16+8):
-                    Datastore.save_knob_data(i, {
-                        "color":      COLORS["green"],
-                        "is_pulsing": False,
-                        "brightness": 10,
-                    })
-                    time.sleep(0.05)
+                for i in range(0, 8):
+                    TimeRelease.add_callback(
+                        func = Datastore.save_knob_data,
+                        data = {"id": i+16, "data": {"color": COLORS["green"], "is_pulsing": False, "brightness": 10}},
+                        time = 0.05 * i
+                    )
 
     # if fighter twister is NOT plugged into MC6, and we are sending the FT data
     #  from Reaper or MC6, then we need some way to relay to the FT USB port.
