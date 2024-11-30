@@ -1,9 +1,9 @@
 import time
 import queue
-import rtmidi
+import rtmidi # MAKE SURE TO pip install "python-rtmidi==1.5.7", nothing else!!!
 import argparse
 import threading
-import tkinter as tk
+import tkinter as tk # MAKE SURE you have same version python to match, install python-tk@3.12
 
 from Log import Log
 from Devices import Devices
@@ -26,6 +26,8 @@ axefx           = Devices.devices["axefx"]
 mc6_pro         = Devices.devices["mc6_pro"]
 devices         = [ fighter_twister, axefx, mc6_pro ]
 
+# Swap the 'name' key in Devices.py with one of these to change the input port
+#  for each device
 midi_names = {
     "widi":            "WIDI Bud Pro",
     "fighter_twister": "Midi Fighter Twister",

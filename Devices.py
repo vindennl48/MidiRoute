@@ -18,7 +18,8 @@ class Devices:
         },
 
         "axefx": {
-            "name":       "Axe-Fx III",
+            #  "name":       "Axe-Fx III",
+            "name":       "Scarlett 18i20 USB",
             "alias":      "axefx",
             "virtual":    False,
             "chan":       14,
@@ -41,6 +42,7 @@ class Devices:
             "clean_high_exp": 112,
             "dist_high_exp":  113,
             "dist_tone_exp":  114,
+            "boost_exp":      125,
             "reverb_exp":     126,
             "volume_exp":     127,
         },

@@ -6,7 +6,8 @@ from Datastore import Datastore
 from TimeRelease import TimeRelease
 from FighterTwister import COLORS
 from FighterTwister import DIM, BRIGHT, CTRL_DELAY_1, CTRL_REVERB_1
-from FighterTwister import CTRL_REVERB_EXP, CTRL_VOLUME_EXP
+from FighterTwister import CTRL_BOOST_1
+from FighterTwister import CTRL_REVERB_EXP, CTRL_VOLUME_EXP, CTRL_PITCH_1
 from FighterTwister import ft_callback, ft_manual_callback
 
 fighter_twister = Devices.devices["fighter_twister"]
@@ -40,6 +41,18 @@ def mc6_callback(message, data):
             })
 
             if ctrl == axefx["scene"]:
+                # pitch_1
+                Datastore.save_knob_data(CTRL_PITCH_1, {
+                    "brightness": DIM,
+                })
+                ft_manual_callback(
+                    type       = "control_change",
+                    chan       = fighter_twister["chan_value"],
+                    ctrl       = CTRL_PITCH_1,
+                    value      = 0, # turn off pitch
+                    block_push = True  # don't push to axefx
+                )
+
                 # delay_1
                 Datastore.save_knob_data(CTRL_DELAY_1, {
                     "brightness": DIM,
@@ -52,12 +65,21 @@ def mc6_callback(message, data):
                     force_push = True  # force push to axefx
                 )
 
+                # boost_1
+                ft_manual_callback(
+                    type       = "control_change",
+                    chan       = fighter_twister["chan_value"],
+                    ctrl       = CTRL_BOOST_1,
+                    value      = 0, # reset
+                    force_push = True # force push to axefx
+                )
+
                 # reverb_1
                 ft_manual_callback(
                     type       = "control_change",
                     chan       = fighter_twister["chan_value"],
                     ctrl       = CTRL_REVERB_1,
-                    value      = 0,   # reset channel select
+                    value      = 1,   # reset channel select
                     block_push = True # don't push to axefx
                 )
 

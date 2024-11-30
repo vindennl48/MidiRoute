@@ -1,0 +1,2207 @@
+2024-10-09 14:15:59.172 python3[40407:741583] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-09 14:15:59.172 python3[40407:741583] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Restarting with Computer
+--> Computer mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-09 14:33:52.879 python3[40840:751592] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-09 14:33:52.879 python3[40840:751592] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Restarting with Computer
+--> Computer mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-09 15:55:24.752 python3[41375:778894] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-09 15:55:24.753 python3[41375:778894] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Restarting with Computer
+--> Computer mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:40:35.614 python3[14010:697254] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:40:35.614 python3[14010:697254] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:42:46.345 python3[14260:699480] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:42:46.345 python3[14260:699480] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:43:51.940 python3[14508:702265] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:43:51.940 python3[14508:702265] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:44:24.133 python3[15128:707068] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:44:24.133 python3[15128:707068] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:44:53.293 python3[15357:708957] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:44:53.293 python3[15357:708957] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+Traceback (most recent call last):
+  File "/Users/mitch/Documents/Code/Python/MidiRoute/main.py", line 14, in <module>
+    from MC6Pro import mc6_setup_callback
+  File "/Users/mitch/Documents/Code/Python/MidiRoute/MC6Pro.py", line 113
+    elif chan == fighter_twister["chan_value"] or \
+    ^^^^
+SyntaxError: invalid syntax
+2024-10-11 22:46:52.592 python3[15841:713236] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:46:52.592 python3[15841:713236] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:48:15.495 python3[16118:715758] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:48:15.495 python3[16118:715758] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:49:19.810 python3[16375:717887] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:49:19.810 python3[16375:717887] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:49:42.532 python3[16616:719837] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:49:42.532 python3[16616:719837] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:50:08.613 python3[16838:721598] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:50:08.613 python3[16838:721598] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+hi
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:50:34.602 python3[17096:723714] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:50:34.602 python3[17096:723714] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=1 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=0 time=0
+hi
+--> MC6: program_change channel=14 program=0 time=0
+hi
+--> MC6: control_change channel=14 control=110 value=1 time=0
+hi
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:54:00.787 python3[17339:726146] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:54:00.787 python3[17339:726146] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: control_change channel=14 control=127 value=0 time=0
+--> MC6: control_change channel=14 control=127 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: control_change channel=3 control=0 value=127 time=0
+--> MC6: control_change channel=1 control=6 value=127 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: control_change channel=1 control=6 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 22:58:23.534 python3[17811:730992] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 22:58:23.534 python3[17811:730992] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: control_change channel=14 control=127 value=0 time=0
+--> MC6: control_change channel=14 control=127 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: control_change channel=3 control=1 value=127 time=0
+--> MC6: program_change channel=14 program=1 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=1 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=2 time=0
+--> MC6: program_change channel=14 program=0 time=0
+--> MC6: control_change channel=14 control=110 value=0 time=0
+--> MC6: control_change channel=3 control=0 value=127 time=0
+--> MC6: control_change channel=3 control=1 value=127 time=0
+--> MC6: note_on channel=15 note=4 velocity=127 time=0
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-10-11 23:18:08.696 python3[18048:733857] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-10-11 23:18:08.696 python3[18048:733857] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: WIDI Bud Pro
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: WIDI Bud Pro
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+2024-11-05 20:13:22.086 python3[10452:6136894] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-11-05 20:13:22.086 python3[10452:6136894] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Restarting with Computer
+--> Computer mode selected.
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Exiting..
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Trying again..
+
+--> Restarting with Alt
+--> Alternative mode selected.
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Midi Fighter Twister' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Could Not Find MIDI Input Port: Axe-Fx III..
+    Device Ignored..
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Exiting..
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Midi Fighter Twister' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Could Not Find MIDI Input Port: Axe-Fx III..
+    Device Ignored..
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Midi Fighter Twister
+--> Selecting MIDI Port 'Midi Fighter Twister' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Could Not Find MIDI Input Port: Axe-Fx III..
+    Device Ignored..
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Could Not Find MIDI Input Port: Morningstar MC6 Pro Port 1..
+##> Exiting..
+2024-11-05 20:19:07.841 python3[10778:6142349] +[IMKClient subclass]: chose IMKClient_Legacy
+2024-11-05 20:19:07.841 python3[10778:6142349] +[IMKInputSession subclass]: chose IMKInputSession_Legacy
+--> Wireless mode selected.
+--> Available MIDI Input Ports:
+0: Morningstar MC6 Pro Port 1
+1: Morningstar MC6 Pro Port 2
+2: Morningstar MC6 Pro Port 3
+3: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Morningstar MC6 Pro Port 1
+1: Morningstar MC6 Pro Port 2
+2: Morningstar MC6 Pro Port 3
+3: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Available MIDI Input Ports:
+0: Morningstar MC6 Pro Port 1
+1: Morningstar MC6 Pro Port 2
+2: Morningstar MC6 Pro Port 3
+3: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'WIDI Bud Pro' for 'fighter_twister' ..
+    Could Not Find MIDI Input Port: WIDI Bud Pro..
+##> Trying again..
+
+--> Restarting with Computer
+--> Computer mode selected.
+--> Available MIDI Input Ports:
+0: Morningstar MC6 Pro Port 1
+1: Morningstar MC6 Pro Port 2
+2: Morningstar MC6 Pro Port 3
+3: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Could Not Find MIDI Input Port: Axe-Fx III..
+    Device Ignored..
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+--> Available MIDI Input Ports:
+0: Morningstar MC6 Pro Port 1
+1: Morningstar MC6 Pro Port 2
+2: Morningstar MC6 Pro Port 3
+3: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Could Not Find MIDI Input Port: Axe-Fx III..
+    Device Ignored..
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Color test: 2
+--> Color test: 3
+--> Color test: 4
+--> Color test: 5
+--> Color test: 6
+--> Color test: 7
+--> Color test: 8
+--> Color test: 9
+--> Color test: 10
+--> Color test: 11
+--> Color test: 12
+--> Color test: 13
+--> Color test: 14
+--> Color test: 15
+--> Color test: 16
+--> Color test: 17
+--> Color test: 18
+--> Color test: 19
+--> Color test: 20
+--> Color test: 21
+--> Color test: 22
+--> Color test: 23
+--> Color test: 24
+--> Color test: 25
+--> Color test: 26
+--> Color test: 27
+--> Color test: 28
+--> Color test: 29
+--> Color test: 30
+--> Color test: 31
+--> Color test: 32
+--> Color test: 33
+--> Color test: 34
+--> Color test: 35
+--> Color test: 36
+--> Color test: 37
+--> Color test: 38
+--> Color test: 39
+--> Color test: 40
+--> Color test: 41
+--> Color test: 42
+--> Color test: 43
+--> Color test: 44
+--> Color test: 45
+--> Color test: 46
+--> Color test: 48
+--> Color test: 49
+--> Color test: 50
+--> Color test: 51
+--> Color test: 52
+--> Color test: 53
+--> Color test: 54
+--> Color test: 56
+--> Color test: 57
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 64
+--> Color test: 65
+--> Color test: 66
+--> Color test: 67
+--> Color test: 68
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 77
+--> Color test: 78
+--> Color test: 79
+--> Color test: 80
+--> Color test: 81
+--> Color test: 82
+--> Color test: 83
+--> Color test: 84
+--> Color test: 85
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 91
+--> Color test: 92
+--> Color test: 93
+--> Color test: 94
+--> Color test: 95
+--> Color test: 96
+--> Color test: 97
+--> Color test: 98
+--> Color test: 99
+--> Color test: 100
+--> Color test: 101
+--> Color test: 102
+--> Color test: 103
+--> Color test: 104
+--> Color test: 105
+--> Color test: 106
+--> Color test: 107
+--> Color test: 108
+--> Color test: 109
+--> Color test: 110
+--> Color test: 111
+--> Color test: 112
+--> Color test: 113
+--> Color test: 114
+--> Color test: 115
+--> Color test: 116
+--> Color test: 115
+--> Color test: 114
+--> Color test: 113
+--> Color test: 112
+--> Color test: 111
+--> Color test: 110
+--> Color test: 109
+--> Color test: 108
+--> Color test: 107
+--> Color test: 106
+--> Color test: 105
+--> Color test: 104
+--> Color test: 103
+--> Color test: 102
+--> Color test: 101
+--> Color test: 100
+--> Color test: 99
+--> Color test: 98
+--> Color test: 97
+--> Color test: 96
+--> Color test: 95
+--> Color test: 94
+--> Color test: 93
+--> Color test: 92
+--> Color test: 91
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 85
+--> Color test: 84
+--> Color test: 83
+--> Color test: 82
+--> Color test: 81
+--> Color test: 80
+--> Color test: 79
+--> Color test: 78
+--> Color test: 77
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 68
+--> Color test: 67
+--> Color test: 66
+--> Color test: 65
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 57
+--> Color test: 56
+--> Color test: 55
+--> Color test: 54
+--> Color test: 53
+--> Color test: 52
+--> Color test: 51
+--> Color test: 50
+--> Color test: 49
+--> Color test: 48
+--> Color test: 47
+--> Color test: 46
+--> Color test: 45
+--> Color test: 44
+--> Color test: 43
+--> Color test: 42
+--> Color test: 41
+--> Color test: 40
+--> Color test: 39
+--> Color test: 38
+--> Color test: 37
+--> Color test: 36
+--> Color test: 35
+--> Color test: 34
+--> Color test: 33
+--> Color test: 32
+--> Color test: 31
+--> Color test: 30
+--> Color test: 29
+--> Color test: 28
+--> Color test: 27
+--> Color test: 26
+--> Color test: 25
+--> Color test: 24
+--> Color test: 23
+--> Color test: 22
+--> Color test: 21
+--> Color test: 20
+--> Color test: 19
+--> Color test: 18
+--> Color test: 17
+--> Color test: 16
+--> Color test: 15
+--> Color test: 14
+--> Color test: 13
+--> Color test: 12
+--> Color test: 11
+--> Color test: 10
+--> Color test: 9
+--> Color test: 8
+--> Color test: 7
+--> Color test: 6
+--> Color test: 5
+--> Color test: 4
+--> Color test: 3
+--> Color test: 2
+--> Color test: 1
+--> Color test: 0
+--> Color test: 2
+--> Color test: 3
+--> Color test: 4
+--> Color test: 5
+--> Color test: 6
+--> Color test: 7
+--> Color test: 8
+--> Color test: 9
+--> Color test: 10
+--> Color test: 11
+--> Color test: 12
+--> Color test: 13
+--> Color test: 14
+--> Color test: 15
+--> Color test: 16
+--> Color test: 17
+--> Color test: 18
+--> Color test: 19
+--> Color test: 20
+--> Color test: 21
+--> Color test: 22
+--> Color test: 23
+--> Color test: 24
+--> Color test: 25
+--> Color test: 26
+--> Color test: 27
+--> Color test: 28
+--> Color test: 29
+--> Color test: 30
+--> Color test: 31
+--> Color test: 32
+--> Color test: 33
+--> Color test: 34
+--> Color test: 35
+--> Color test: 36
+--> Color test: 37
+--> Color test: 38
+--> Color test: 39
+--> Color test: 40
+--> Color test: 41
+--> Color test: 42
+--> Color test: 43
+--> Color test: 44
+--> Color test: 45
+--> Color test: 46
+--> Color test: 47
+--> Color test: 48
+--> Color test: 49
+--> Color test: 50
+--> Color test: 51
+--> Color test: 52
+--> Color test: 53
+--> Color test: 54
+--> Color test: 55
+--> Color test: 56
+--> Color test: 57
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 63
+--> Color test: 64
+--> Color test: 65
+--> Color test: 66
+--> Color test: 67
+--> Color test: 68
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 77
+--> Color test: 78
+--> Color test: 79
+--> Color test: 80
+--> Color test: 81
+--> Color test: 82
+--> Color test: 83
+--> Color test: 84
+--> Color test: 85
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 91
+--> Color test: 92
+--> Color test: 93
+--> Color test: 94
+--> Color test: 95
+--> Color test: 96
+--> Color test: 97
+--> Color test: 98
+--> Color test: 99
+--> Color test: 100
+--> Color test: 101
+--> Color test: 102
+--> Color test: 103
+--> Color test: 104
+--> Color test: 105
+--> Color test: 106
+--> Color test: 107
+--> Color test: 108
+--> Color test: 109
+--> Color test: 110
+--> Color test: 111
+--> Color test: 112
+--> Color test: 113
+--> Color test: 114
+--> Color test: 115
+--> Color test: 116
+--> Color test: 117
+--> Color test: 118
+--> Color test: 119
+--> Color test: 120
+--> Color test: 119
+--> Color test: 118
+--> Color test: 117
+--> Color test: 116
+--> Color test: 115
+--> Color test: 114
+--> Color test: 113
+--> Color test: 112
+--> Color test: 111
+--> Color test: 110
+--> Color test: 109
+--> Color test: 108
+--> Color test: 107
+--> Color test: 106
+--> Color test: 105
+--> Color test: 104
+--> Color test: 103
+--> Color test: 102
+--> Color test: 101
+--> Color test: 100
+--> Color test: 99
+--> Color test: 98
+--> Color test: 97
+--> Color test: 96
+--> Color test: 95
+--> Color test: 94
+--> Color test: 93
+--> Color test: 92
+--> Color test: 91
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 85
+--> Color test: 84
+--> Color test: 83
+--> Color test: 82
+--> Color test: 81
+--> Color test: 80
+--> Color test: 79
+--> Color test: 78
+--> Color test: 77
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 68
+--> Color test: 67
+--> Color test: 66
+--> Color test: 65
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 57
+--> Color test: 56
+--> Color test: 55
+--> Color test: 54
+--> Color test: 53
+--> Color test: 52
+--> Color test: 51
+--> Color test: 50
+--> Color test: 49
+--> Color test: 48
+--> Color test: 47
+--> Color test: 46
+--> Color test: 45
+--> Color test: 44
+--> Color test: 45
+--> Color test: 46
+--> Color test: 47
+--> Color test: 48
+--> Color test: 49
+--> Color test: 50
+--> Color test: 51
+--> Color test: 52
+--> Color test: 53
+--> Color test: 54
+--> Color test: 55
+--> Color test: 56
+--> Color test: 57
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 63
+--> Color test: 64
+--> Color test: 65
+--> Color test: 66
+--> Color test: 67
+--> Color test: 68
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 77
+--> Color test: 78
+--> Color test: 79
+--> Color test: 80
+--> Color test: 81
+--> Color test: 82
+--> Color test: 83
+--> Color test: 84
+--> Color test: 85
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 85
+--> Color test: 84
+--> Color test: 83
+--> Color test: 82
+--> Color test: 81
+--> Color test: 80
+--> Color test: 79
+--> Color test: 78
+--> Color test: 77
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 68
+--> Color test: 67
+--> Color test: 66
+--> Color test: 65
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 63
+--> Color test: 64
+--> Color test: 65
+--> Color test: 66
+--> Color test: 67
+--> Color test: 68
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 77
+--> Color test: 78
+--> Color test: 79
+--> Color test: 80
+--> Color test: 81
+--> Color test: 82
+--> Color test: 83
+--> Color test: 84
+--> Color test: 85
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 91
+--> Color test: 92
+--> Color test: 91
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 85
+--> Color test: 84
+--> Color test: 83
+--> Color test: 82
+--> Color test: 81
+--> Color test: 80
+--> Color test: 79
+--> Color test: 78
+--> Color test: 77
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 68
+--> Color test: 67
+--> Color test: 66
+--> Color test: 65
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 57
+--> Color test: 56
+--> Color test: 55
+--> Color test: 54
+--> Color test: 53
+--> Color test: 52
+--> Color test: 51
+--> Color test: 50
+--> Color test: 49
+--> Color test: 48
+--> Color test: 47
+--> Color test: 46
+--> Color test: 45
+--> Color test: 44
+--> Color test: 43
+--> Color test: 42
+--> Color test: 41
+--> Color test: 40
+--> Color test: 39
+--> Color test: 38
+--> Color test: 37
+--> Color test: 36
+--> Color test: 35
+--> Color test: 34
+--> Color test: 33
+--> Color test: 32
+--> Color test: 31
+--> Color test: 30
+--> Color test: 29
+--> Color test: 28
+--> Color test: 27
+--> Color test: 26
+--> Color test: 25
+--> Color test: 24
+--> Color test: 23
+--> Color test: 22
+--> Color test: 21
+--> Color test: 20
+--> Color test: 19
+--> Color test: 18
+--> Color test: 17
+--> Color test: 16
+--> Color test: 15
+--> Color test: 14
+--> Color test: 13
+--> Color test: 12
+--> Color test: 11
+--> Color test: 10
+--> Color test: 9
+--> Color test: 8
+--> Color test: 7
+--> Color test: 6
+--> Color test: 5
+--> Color test: 4
+--> Color test: 3
+--> Color test: 2
+--> Color test: 1
+--> Color test: 0
+--> Color test: 2
+--> Color test: 3
+--> Color test: 4
+--> Color test: 5
+--> Color test: 6
+--> Color test: 7
+--> Color test: 8
+--> Color test: 9
+--> Color test: 10
+--> Color test: 11
+--> Color test: 12
+--> Color test: 13
+--> Color test: 14
+--> Color test: 15
+--> Color test: 16
+--> Color test: 17
+--> Color test: 18
+--> Color test: 19
+--> Color test: 20
+--> Color test: 21
+--> Color test: 22
+--> Color test: 23
+--> Color test: 24
+--> Color test: 25
+--> Color test: 26
+--> Color test: 27
+--> Color test: 28
+--> Color test: 29
+--> Color test: 30
+--> Color test: 31
+--> Color test: 32
+--> Color test: 33
+--> Color test: 34
+--> Color test: 35
+--> Color test: 36
+--> Color test: 37
+--> Color test: 38
+--> Color test: 39
+--> Color test: 40
+--> Color test: 41
+--> Color test: 42
+--> Color test: 43
+--> Color test: 44
+--> Color test: 45
+--> Color test: 46
+--> Color test: 47
+--> Color test: 48
+--> Color test: 49
+--> Color test: 50
+--> Color test: 51
+--> Color test: 52
+--> Color test: 53
+--> Color test: 54
+--> Color test: 55
+--> Color test: 56
+--> Color test: 57
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 63
+--> Color test: 64
+--> Color test: 65
+--> Color test: 66
+--> Color test: 67
+--> Color test: 68
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 77
+--> Color test: 78
+--> Color test: 79
+--> Color test: 80
+--> Color test: 81
+--> Color test: 82
+--> Color test: 83
+--> Color test: 84
+--> Color test: 85
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 91
+--> Color test: 92
+--> Color test: 93
+--> Color test: 94
+--> Color test: 95
+--> Color test: 96
+--> Color test: 97
+--> Color test: 98
+--> Color test: 99
+--> Color test: 100
+--> Color test: 101
+--> Color test: 100
+--> Color test: 99
+--> Color test: 98
+--> Color test: 97
+--> Color test: 96
+--> Color test: 95
+--> Color test: 94
+--> Color test: 93
+--> Color test: 92
+--> Color test: 91
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 87
+--> Color test: 88
+--> Color test: 89
+--> Color test: 90
+--> Color test: 91
+--> Color test: 92
+--> Color test: 93
+--> Color test: 94
+--> Color test: 95
+--> Color test: 96
+--> Color test: 97
+--> Color test: 98
+--> Color test: 99
+--> Color test: 100
+--> Color test: 101
+--> Color test: 102
+--> Color test: 103
+--> Color test: 104
+--> Color test: 105
+--> Color test: 106
+--> Color test: 107
+--> Color test: 108
+--> Color test: 109
+--> Color test: 110
+--> Color test: 111
+--> Color test: 112
+--> Color test: 113
+--> Color test: 114
+--> Color test: 115
+--> Color test: 116
+--> Color test: 117
+--> Color test: 118
+--> Color test: 119
+--> Color test: 120
+--> Color test: 121
+--> Color test: 122
+--> Color test: 121
+--> Color test: 120
+--> Color test: 119
+--> Color test: 118
+--> Color test: 117
+--> Color test: 116
+--> Color test: 115
+--> Color test: 114
+--> Color test: 113
+--> Color test: 112
+--> Color test: 111
+--> Color test: 110
+--> Color test: 109
+--> Color test: 108
+--> Color test: 109
+--> Color test: 110
+--> Color test: 111
+--> Color test: 112
+--> Color test: 111
+--> Color test: 110
+--> Color test: 109
+--> Color test: 108
+--> Color test: 107
+--> Color test: 106
+--> Color test: 105
+--> Color test: 104
+--> Color test: 103
+--> Color test: 102
+--> Color test: 101
+--> Color test: 100
+--> Color test: 99
+--> Color test: 98
+--> Color test: 97
+--> Color test: 96
+--> Color test: 95
+--> Color test: 94
+--> Color test: 93
+--> Color test: 92
+--> Color test: 91
+--> Color test: 90
+--> Color test: 89
+--> Color test: 88
+--> Color test: 87
+--> Color test: 86
+--> Color test: 85
+--> Color test: 84
+--> Color test: 83
+--> Color test: 82
+--> Color test: 81
+--> Color test: 80
+--> Color test: 79
+--> Color test: 78
+--> Color test: 77
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 70
+--> Color test: 71
+--> Color test: 72
+--> Color test: 73
+--> Color test: 74
+--> Color test: 75
+--> Color test: 76
+--> Color test: 75
+--> Color test: 74
+--> Color test: 73
+--> Color test: 72
+--> Color test: 71
+--> Color test: 70
+--> Color test: 69
+--> Color test: 68
+--> Color test: 67
+--> Color test: 66
+--> Color test: 65
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 57
+--> Color test: 56
+--> Color test: 57
+--> Color test: 58
+--> Color test: 59
+--> Color test: 60
+--> Color test: 61
+--> Color test: 62
+--> Color test: 63
+--> Color test: 64
+--> Color test: 63
+--> Color test: 62
+--> Color test: 61
+--> Color test: 60
+--> Color test: 59
+--> Color test: 58
+--> Color test: 57
+--> Color test: 56
+--> Color test: 55
+--> Color test: 54
+--> Color test: 53
+--> Color test: 52
+--> Color test: 51
+--> Color test: 50
+--> Color test: 49
+--> Color test: 48
+--> Color test: 47
+--> Color test: 46
+--> Color test: 45
+--> Color test: 44
+--> Color test: 43
+--> Color test: 42
+--> Color test: 41
+--> Color test: 40
+--> Color test: 39
+--> Color test: 38
+--> Color test: 37
+--> Color test: 36
+--> Color test: 35
+--> Color test: 34
+--> Color test: 35
+--> Color test: 36
+--> Color test: 37
+--> Color test: 38
+--> Color test: 39
+--> Color test: 40
+--> Color test: 41
+--> Color test: 42
+--> Color test: 43
+--> Color test: 44
+--> Color test: 45
+--> Color test: 46
+--> Color test: 45
+--> Color test: 44
+--> Color test: 43
+--> Color test: 42
+--> Color test: 41
+--> Color test: 40
+--> Color test: 39
+--> Color test: 38
+--> Color test: 37
+--> Color test: 36
+--> Color test: 35
+--> Color test: 34
+--> Color test: 33
+--> Color test: 32
+--> Color test: 31
+--> Color test: 30
+--> Color test: 29
+--> Color test: 28
+--> Color test: 27
+--> Color test: 26
+--> Color test: 25
+--> Color test: 24
+--> Color test: 23
+--> Color test: 22
+--> Color test: 21
+--> Color test: 20
+--> Color test: 19
+--> Color test: 18
+--> Color test: 19
+--> Color test: 18
+--> Color test: 17
+--> Color test: 16
+--> Color test: 15
+--> Color test: 14
+--> Color test: 13
+--> Color test: 12
+--> Color test: 11
+--> Color test: 10
+--> Color test: 9
+--> Color test: 8
+--> Color test: 7
+--> Color test: 6
+--> Color test: 5
+--> Color test: 4
+--> Color test: 3
+--> Color test: 2
+--> Color test: 1
+--> Color test: 0
+--> Restarting with Computer
+--> Computer mode selected.
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+--> Available MIDI Input Ports:
+0: Axe-Fx III
+1: Morningstar MC6 Pro Port 1
+2: Morningstar MC6 Pro Port 2
+3: Morningstar MC6 Pro Port 3
+4: Morningstar MC6 Pro Port 4
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'fighter_twister' ..
+    Success!
+--> Selecting MIDI Port 'Axe-Fx III' for 'axefx' ..
+    Success!
+--> Selecting MIDI Port 'Morningstar MC6 Pro Port 1' for 'mc6_pro' ..
+    Success!
+--> All Devices Found!
+--> Closing all ports...
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Axe-Fx III
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> Closing port: Morningstar MC6 Pro Port 1
+    Closing 'in' port
+    Closing 'out' port
+    Port closed!
+--> All cleaned up; Goodbye!
+Traceback (most recent call last):
+  File "/Users/mitch/Documents/Code/Python/MidiRoute/main.py", line 6, in <module>
+    import tkinter as tk
+  File "/Users/mitch/.pyenv/versions/3.10.4/lib/python3.10/tkinter/__init__.py", line 37, in <module>
+    import _tkinter # If this fails your Python may not be configured for Tk
+ImportError: dlopen(/Users/mitch/.pyenv/versions/3.10.4/lib/python3.10/lib-dynload/_tkinter.cpython-310-darwin.so, 0x0002): Library not loaded: /opt/homebrew/opt/tcl-tk/lib/libtcl8.6.dylib
+  Referenced from: <F5E011AA-0509-30D4-8FE7-CA047C3DD216> /Users/mitch/.pyenv/versions/3.10.4/lib/python3.10/lib-dynload/_tkinter.cpython-310-darwin.so
+  Reason: tried: '/opt/homebrew/opt/tcl-tk/lib/libtcl8.6.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/tcl-tk/lib/libtcl8.6.dylib' (no such file), '/opt/homebrew/opt/tcl-tk/lib/libtcl8.6.dylib' (no such file), '/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl8.6.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl8.6.dylib' (no such file), '/opt/homebrew/Cellar/tcl-tk/9.0.0_1/lib/libtcl8.6.dylib' (no such file)

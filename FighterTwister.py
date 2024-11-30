@@ -20,8 +20,10 @@ BRIGHT = 30
 
 CTRL_RESET_1    = 5
 CTRL_RESET_2    = 21
-CTRL_DELAY_1    = 26
-CTRL_REVERB_1   = 27
+CTRL_PITCH_1    = 24
+CTRL_DELAY_1    = 25
+CTRL_REVERB_1   = 26
+CTRL_BOOST_1    = 27
 CTRL_COLOR_TEST = 29 # to test new colors
 CTRL_REVERB_EXP = 30
 CTRL_VOLUME_EXP = 31
@@ -64,20 +66,59 @@ def ft_callback(message, data):
     # ignore all other channels
     elif chan not in [chan_value, chan_press]: return
 
+    elif ctrl == CTRL_PITCH_1:
+        if chan == chan_value:
+            split_val = select_split(value, 4)
+            color     = ring(COLOR_WHEEL, split_val)
+
+            if Datastore.save_knob_data(ctrl, {
+                "value": value,
+                "color": color,
+                #  "brightness": BRIGHT if value > 0 else DIM,
+            }) or force_push:
+                Devices.send_midi("cc", "axefx", {
+                    "channel":    axefx["chan"],
+                    "control":    axefx["pitch_1_chan"],
+                    "value":      split_val,
+                    "block_push": block_push,
+                })
+            if Datastore.save_knob_data(ctrl, {
+                #  "value": value,
+                #  "color": color,
+                "brightness": BRIGHT if value > 0 else DIM,
+            }) or force_push:
+                Devices.send_midi("cc", "axefx", {
+                    "channel":    axefx["chan"],
+                    "control":    axefx["pitch_1_byp"],
+                    #  "value":      split_val,
+                    "value":      127 if value > 0 else 0,
+                    "block_push": block_push,
+                })
+
+            # make sure axe is in sync with block bypass
+            if force_push:
+                knob = Datastore.get_knob(ctrl)
+                Devices.send_midi("cc", "axefx", {
+                    "channel":    axefx["chan"],
+                    "control":    axefx["pitch_1_byp"],
+                    "value":      127 if knob["brightness"] == BRIGHT else 0,
+                    "block_push": block_push,
+                })
+
     elif ctrl == CTRL_DELAY_1:
         if chan == chan_value:
             split_val = select_split(value, 4)
             color     = ring(COLOR_WHEEL, split_val)
 
             if Datastore.save_knob_data(ctrl, {
-                "value":      value,
-                "color":      color,
+                "value": value,
+                "color": color,
                 #  "brightness": BRIGHT if value > 0 else DIM,
             }) or force_push:
                 Devices.send_midi("cc", "axefx", {
-                    "channel": axefx["chan"],
-                    "control": axefx["delay_1_chan"],
-                    "value":   split_val,
+                    "channel":    axefx["chan"],
+                    "control":    axefx["delay_1_chan"],
+                    "value":      split_val,
                     "block_push": block_push,
                 })
 
@@ -105,6 +146,20 @@ def ft_callback(message, data):
                     "channel":    axefx["chan"],
                     "control":    axefx["reverb_1_chan"],
                     "value":      split_val,
+                    "block_push": block_push,
+                })
+
+    elif ctrl == CTRL_BOOST_1:
+        if chan == chan_value:
+            if Datastore.save_knob_data(ctrl, {
+                "value": value,
+                "color": COLORS["yellow"],
+                "brightness": BRIGHT if value > 0 else DIM,
+            }) or force_push:
+                Devices.send_midi("cc", "axefx", {
+                    "channel":    axefx["chan"],
+                    "control":    axefx["boost_exp"],
+                    "value":      value,
                     "block_push": block_push,
                 })
 
